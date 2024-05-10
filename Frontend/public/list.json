@@ -1,0 +1,178 @@
+[
+    {
+        "id": 1,
+        "name": "Story Book",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1715184435~exp=1715188035~hmac=c6a3c1495301d2225254e4ccd4d2731a4609ceb985dbdbfbbbdd024a7ba80171&w=740"
+    },
+    {
+        "id": 2,
+        "name": "Young Adult",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149338882.jpg?t=st=1715183089~exp=1715186689~hmac=ca996d837a07a7e847e66540a4a111587e918c145b35705be34addc78a0e5394&w=740"
+    },
+    {
+        "id": 3,
+        "name": "Romance",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?t=st=1715183042~exp=1715186642~hmac=7157bd64232c7603a6d7b7964b5128e9cdda5cb8d04ce547551af44c4376c7dd&w=740"
+    },
+    {
+        "id": 4,
+        "name": "Mystery & Thriller",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1715184435~exp=1715188035~hmac=c6a3c1495301d2225254e4ccd4d2731a4609ceb985dbdbfbbbdd024a7ba80171&w=740"
+    },
+    {
+        "id": 5,
+        "name": "I am Kalam.",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149338882.jpg?t=st=1715183089~exp=1715186689~hmac=ca996d837a07a7e847e66540a4a111587e918c145b35705be34addc78a0e5394&w=740"
+    },
+    {
+        "id": 6,
+        "name": "Modern History",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1715084783~exp=1715088383~hmac=87debaeada015d4046603ebd7fdeed5a1b548fae7e6d50785b94ce870040bae4&w=740"
+    },
+    {
+        "id": 7,
+        "name": "Technology",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1715084783~exp=1715088383~hmac=87debaeada015d4046603ebd7fdeed5a1b548fae7e6d50785b94ce870040bae4&w=740"
+    },
+    {
+        "id": 8,
+        "name": "Intertainment",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1715084783~exp=1715088383~hmac=87debaeada015d4046603ebd7fdeed5a1b548fae7e6d50785b94ce870040bae4&w=740"
+    },
+    {
+        "id": 9,
+        "name": "Poetry Book",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1715084783~exp=1715088383~hmac=87debaeada015d4046603ebd7fdeed5a1b548fae7e6d50785b94ce870040bae4&w=740"
+    },
+    {
+        "id": 10,
+        "name": "Horror Book",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1715084783~exp=1715088383~hmac=87debaeada015d4046603ebd7fdeed5a1b548fae7e6d50785b94ce870040bae4&w=740"
+    },
+    {
+        "id": 3,
+        "name": "Romance",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?t=st=1715183042~exp=1715186642~hmac=7157bd64232c7603a6d7b7964b5128e9cdda5cb8d04ce547551af44c4376c7dd&w=740"
+    },
+    {
+        "id": 4,
+        "name": "Mystery & Thriller",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1715184435~exp=1715188035~hmac=c6a3c1495301d2225254e4ccd4d2731a4609ceb985dbdbfbbbdd024a7ba80171&w=740"
+    },
+    {
+        "id": 3,
+        "name": "Romance",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?t=st=1715183042~exp=1715186642~hmac=7157bd64232c7603a6d7b7964b5128e9cdda5cb8d04ce547551af44c4376c7dd&w=740"
+    },
+    {
+        "id": 4,
+        "name": "Mystery & Thriller",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1715184435~exp=1715188035~hmac=c6a3c1495301d2225254e4ccd4d2731a4609ceb985dbdbfbbbdd024a7ba80171&w=740"
+    },
+    {
+        "id": 3,
+        "name": "Romance",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?t=st=1715183042~exp=1715186642~hmac=7157bd64232c7603a6d7b7964b5128e9cdda5cb8d04ce547551af44c4376c7dd&w=740"
+    },
+    {
+        "id": 4,
+        "name": "Mystery & Thriller",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1715184435~exp=1715188035~hmac=c6a3c1495301d2225254e4ccd4d2731a4609ceb985dbdbfbbbdd024a7ba80171&w=740"
+    },
+    {
+        "id": 3,
+        "name": "Romance",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?t=st=1715183042~exp=1715186642~hmac=7157bd64232c7603a6d7b7964b5128e9cdda5cb8d04ce547551af44c4376c7dd&w=740"
+    },
+    {
+        "id": 4,
+        "name": "Mystery & Thriller",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1715184435~exp=1715188035~hmac=c6a3c1495301d2225254e4ccd4d2731a4609ceb985dbdbfbbbdd024a7ba80171&w=740"
+    },
+    {
+        "id": 3,
+        "name": "Romance",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?t=st=1715183042~exp=1715186642~hmac=7157bd64232c7603a6d7b7964b5128e9cdda5cb8d04ce547551af44c4376c7dd&w=740"
+    },
+    {
+        "id": 4,
+        "name": "Mystery & Thriller",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1715184435~exp=1715188035~hmac=c6a3c1495301d2225254e4ccd4d2731a4609ceb985dbdbfbbbdd024a7ba80171&w=740"
+    },
+    {
+        "id": 3,
+        "name": "Romance",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334862.jpg?t=st=1715183042~exp=1715186642~hmac=7157bd64232c7603a6d7b7964b5128e9cdda5cb8d04ce547551af44c4376c7dd&w=740"
+    },
+    {
+        "id": 4,
+        "name": "Mystery & Thriller",
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price":0,
+        "category":"Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1715184435~exp=1715188035~hmac=c6a3c1495301d2225254e4ccd4d2731a4609ceb985dbdbfbbbdd024a7ba80171&w=740"
+    }
+]    
