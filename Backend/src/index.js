@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from "./db/db.js"
+import bookRoute from "./routes/book.route.js"
 
 dotenv.config({
     path: './env'
@@ -22,3 +23,7 @@ connectDB()
 .catch((error) => {
     console.log("MongoDB connection failed!!!", error);
 })
+
+
+// starting route
+app.use("/book", bookRoute)
