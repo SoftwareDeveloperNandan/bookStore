@@ -1,22 +1,16 @@
-import express from 'express';
 import dotenv from 'dotenv';
-import connectDB from "./db/db.js"
-import bookRoute from "./routes/book.route.js"
+import connectDB from "./db/db.js";
+import {app} from './app.js'
+
 
 dotenv.config({
-    path: './env'
-})
-const app = express()
-
-// Start writing route.
-app.get("/", (req, res) => {
-    res.send("BookStore")
+    path: './.env'
 })
 
 // Database connection handle
 connectDB()
 .then(() => {
-    app.listen(process.env.PORT || 5173, () => {
+    app.listen(process.env.PORT || 7000, () => {
         console.log(`App is listing at port ${process.env.PORT}`);
     })
 })
@@ -24,6 +18,3 @@ connectDB()
     console.log("MongoDB connection failed!!!", error);
 })
 
-
-// starting route
-app.use("/book", bookRoute)
