@@ -1,27 +1,31 @@
 import { ApiError } from '../utils/ApiError.js';
-import {asyncHandler} from '../utils/asyncHandler.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
 import { User } from '../models/user.modal.js'
 import { ApiResponse } from '../utils/ApiResponse.js';
 
-const generateAccessAndRefreshToken = async (userId) => {
+const generateAccessAndRefereshTokens = async(userId) =>{
     try {
         const user = await User.findById(userId)
-        const refreshToken = user.generateAccessToken();
+        if (!user) {
+            throw new ApiError(401, "User not found")
+        }
         const accessToken = user.generateAccessToken();
+        const refreshToken = user.generateRefreshToken();
 
-        //set refreshToken in to the database
-        user.refreshToken = refreshToken;   
-        user.accessToken = accessToken;
+        user.refreshToken = refreshToken
         await user.save({ validateBeforeSave: false })
 
-        return {refreshToken, accessToken}
+        return {accessToken, refreshToken}
+
+
     } catch (error) {
-        throw new ApiError(500, "Something went worng while generating Access and Refresh Token.")
+        throw new ApiError(500, "Something went wrong while generating referesh and access token")
     }
 }
 
 
-const registerUser = asyncHandler( async (req, res, next) => {
+
+const registerUser = asyncHandler( async (req, res) => {
     // user detail from frontend
     // validation is required and check empty.
     // check user already login?
@@ -74,7 +78,7 @@ const userLogin = asyncHandler( async (req, res) => {
 
     // user login detail
     const {email, password} = req.body
-    if(!email || !password){
+    if(!(email || password)){
         throw new ApiError(404, "Please enter email-id and password.")
     }
 
@@ -92,14 +96,13 @@ const userLogin = asyncHandler( async (req, res) => {
     }
 
     // password check user
-    const isPasswordCorrect = user.isPasswordCorrect(password);
+    const isPasswordCorrect = await user.isPasswordCorrect(password);
     if (!isPasswordCorrect) {
         throw new ApiError(404, "Password incorrect")
     }
 
    // generate access token and refresh token
-   const {accessToken, refreshToken} = await generateAccessAndRefreshToken(user._id)
-
+   const { refreshToken, accessToken } = await generateAccessAndRefereshTokens(user._id)
    const loggedInUser = await User.findById(user._id).select( "-passoword -refreshToken")
 
    const options = {
@@ -121,11 +124,32 @@ const userLogin = asyncHandler( async (req, res) => {
    )
 })
 
-const logOutUser = asyncHandler( async (req, res) => {
-    
+const userLogout = asyncHandler( async (req, res) => {
+   await User.findByIdAndUpdate(
+        req.user._id,
+        {
+            $unset: {
+                refreshToken: 1
+            }
+        },
+        {
+            new: true
+        }
+    )
+
+    const options = {
+        httpOnly: true,
+        secure: true
+       }
+
+    return res.status(200)
+    .clearCookie("refreshToken", options)
+    .clearCookie("accessToken", options)
+    .json(new ApiResponse(200, {}, "User logged out"))
 })
 
 export {
     registerUser,
-    userLogin
+    userLogin,
+    userLogout
 }

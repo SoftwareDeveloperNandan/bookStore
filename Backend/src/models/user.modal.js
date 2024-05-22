@@ -9,7 +9,7 @@ const userSchema = new Schema(
         required: true,
         trim: true,
         index: true // when enable searching field then index will be true
-    
+        
      },
      email: {
         type: String,
@@ -22,7 +22,9 @@ const userSchema = new Schema(
         type: String,
         required: [true, "Password is required"]
      },
-     
+     refreshToken: {
+        type: String
+     }
    },
     {
         timestamps: true
@@ -45,7 +47,7 @@ userSchema.methods.isPasswordCorrect = async function(password){
 }
 
 // Generate AccessToken with jwt
-userSchema.method.generateAccessToken = function(){
+userSchema.methods.generateAccessToken = function(){
     return jwt.sign(
         {
             _id: this._id,
@@ -60,10 +62,10 @@ userSchema.method.generateAccessToken = function(){
     )
 }
 
-userSchema.method.generateRefreshToken = function() {
+userSchema.methods.generateRefreshToken = function() {
     return jwt.sign(
         {
-            id: this._id
+            id: this._id,
         },
         process.env.REFRESH_TOKEN_SECRET,
         {

@@ -5,6 +5,7 @@ import About from './about/about.jsx'
 import Contact from './contact/Contact.jsx'
 import Courses from './course/Courses.jsx'
 import Signup from './component/Signup.jsx'
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/about' element = {<About />} />
           <Route path='/contact' element = {<Contact />} />
         </Routes>
+        <Toaster />
      </div>
     </>
   )

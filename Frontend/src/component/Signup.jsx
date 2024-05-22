@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast"
 
 function Signup() {
   const {
@@ -9,8 +11,25 @@ function Signup() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Form data>>>", data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.userEmail,
+      password: data.userPassword
+    }
+    await axios.post("http://localhost:7000/bookstore/user/register", userInfo)
+    .then(
+      (res) =>{
+        if (res.data) {
+          console.log(res.data.message);
+          toast.success(`${res.data.message}`)
+          localStorage.setItem("userInfo", JSON.stringify(res.data))
+        }
+      }
+    ).catch((error) => {
+      console.log("Error", error);
+      toast.error(`User already exist.`)
+    })
   }
   return (
     <>
@@ -32,13 +51,13 @@ function Signup() {
               <br />
               <input
                 type="text"
-                id="userFullname"
+                id="fullname"
                 placeholder="Nandan Kumar"
                 className="w-full px-3 py-1 border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
-                {...register("userFullname", { required: true })}
+                {...register("fullname", { required: true })}
                 autoComplete="off"
               />
-              {errors.userFullname && <span className="text-red-600">This field is required</span>}
+              {errors.fullname && <span className="text-red-600">This field is required</span>}
             </div>
 
             <div className="mt-4 space-y-1">
