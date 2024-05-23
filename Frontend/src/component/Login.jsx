@@ -21,14 +21,19 @@ function Login() {
     .then(
       (res) =>{
         if (res.data) {
-          console.log(res.data.message);
-          toast.success(`${res.data.message}`)
-          localStorage.setItem("loginInfo", JSON.stringify(res.data))
+          toast.success(`${res.data.message}`);
+          setTimeout(() => {
+            localStorage.setItem("loginInfo", JSON.stringify(res.data))
+            window.location.reload();
+          }, 2000);
+          
         }
       }
     ).catch((error) => {
-      console.log("Error", error);
       toast.error(`Invalid credentials.`)
+      if (error.res) {
+        setTimeout(() => {}, 2000);
+      }
     })
   }
 
@@ -51,7 +56,7 @@ function Login() {
                 type="email"
                 id="userEmail"
                 placeholder="abc@gmail.com"
-                className="w-full px-3 py-1 border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:bg-slate-100 dark:text-slate-950"
                 {...register("userEmail", { required: true })}
                 autoComplete="off"
               />
@@ -64,8 +69,8 @@ function Login() {
               <input
                 type="password"
                 id="userPassword"
-                placeholder="Strong password"
-                className="w-full px-3 py-1  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                placeholder="Strong password" 
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:bg-slate-100 dark:text-slate-950"
                 {...register("userPassword", { required: true })}
                 autoComplete="off"
               />

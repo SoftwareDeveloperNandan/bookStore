@@ -5,6 +5,7 @@ import axios from "axios";
 import toast from "react-hot-toast"
 
 function Signup() {
+  
   const {
     register,
     handleSubmit,
@@ -23,7 +24,10 @@ function Signup() {
         if (res.data) {
           console.log(res.data.message);
           toast.success(`${res.data.message}`)
-          localStorage.setItem("userInfo", JSON.stringify(res.data))
+          localStorage.setItem("userInfo", JSON.stringify(res.data));
+          setTimeout(() => {
+            window.location.reload()
+          }, 3000);
         }
       }
     ).catch((error) => {
@@ -33,7 +37,7 @@ function Signup() {
   }
   return (
     <>
-      <div>
+      <div id="closeSignInModal">
         <div
           className="flex h-screen items-center justify-center grow shadow-lg "
         >
@@ -53,7 +57,7 @@ function Signup() {
                 type="text"
                 id="fullname"
                 placeholder="Nandan Kumar"
-                className="w-full px-3 py-1 border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="w-full px-3 py-2 border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
                 {...register("fullname", { required: true })}
                 autoComplete="off"
               />
@@ -65,13 +69,13 @@ function Signup() {
               <br />
               <input
                 type="email"
-                id="userEamail"
+                id="userEmail"
                 placeholder="abc@gmail.com"
-                className="w-full px-3 py-1  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="w-full px-3 py-2  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
                 {...register("userEmail", { required: true })}
                 autoComplete="off"
               />
-              {errors.userFullname && <span className="text-red-600">This field is required</span>}
+              {errors.userEmail && <span className="text-red-600">This field is required</span>}
             </div>
 
             <div className="mt-4 space-y-1">
@@ -81,7 +85,7 @@ function Signup() {
                 type="password"
                 id="userPassword"
                 placeholder="Password"
-                className="w-full px-3 py-1  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="w-full px-3 py-2  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
                 {...register("userPassword", { required: true })}
                 autoComplete="off"
               />
@@ -95,7 +99,7 @@ function Signup() {
                 type="password"
                 id="userCPassword"
                 placeholder="Confirm password"
-                className="w-full px-3 py-1  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="w-full px-3 py-2  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
                 {...register("userCPassword", { required: true })}
                 autoComplete="off"
               />

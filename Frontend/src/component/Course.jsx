@@ -35,7 +35,7 @@ function Course() {
             itaque consectetur impedit.
           </p>
           <Link to={"/"}>
-          <button className="btn btn-active mt-4 bg-pink-500 text-white px-5 py-2 rounded-md hover:bg-pink-700 duration-300 cursor-pointer">
+          <button className="btn btn-active mt-4 bg-pink-600 text-white px-5 py-2 rounded-md border-none hover:bg-slate-700 duration-300 cursor-pointer">
             Back
           </button>
         </Link>
