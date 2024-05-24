@@ -57,7 +57,7 @@ function Signup() {
                 type="text"
                 id="fullname"
                 placeholder="Nandan Kumar"
-                className="w-full px-3 py-2 border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="bg-gray-50 border border-gray-300 grow font-bold text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:bg-slate-100 dark:text-slate-950"
                 {...register("fullname", { required: true })}
                 autoComplete="off"
               />
@@ -71,7 +71,7 @@ function Signup() {
                 type="email"
                 id="userEmail"
                 placeholder="abc@gmail.com"
-                className="w-full px-3 py-2  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="bg-gray-50 border border-gray-300 grow font-bold text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:bg-slate-100 dark:text-slate-950"
                 {...register("userEmail", { required: true })}
                 autoComplete="off"
               />
@@ -85,7 +85,7 @@ function Signup() {
                 type="password"
                 id="userPassword"
                 placeholder="Password"
-                className="w-full px-3 py-2  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="bg-gray-50 border border-gray-300 grow font-bold text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:bg-slate-100 dark:text-slate-950"
                 {...register("userPassword", { required: true })}
                 autoComplete="off"
               />
@@ -99,7 +99,7 @@ function Signup() {
                 type="password"
                 id="userCPassword"
                 placeholder="Confirm password"
-                className="w-full px-3 py-2  border rounded-md grow outline-none dark:bg-slate-100 dark:text-slate-950 "
+                className="bg-gray-50 border border-gray-300 grow font-bold text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:bg-slate-100 dark:text-slate-950"
                 {...register("userCPassword", { required: true })}
                 autoComplete="off"
               />

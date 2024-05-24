@@ -1,7 +1,6 @@
 import React from "react";
 import Gif from "../../public/Tablet-login.gif";
 
-
 function admin() {
   return (
     <>
@@ -22,7 +21,7 @@ function admin() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-2 border rounded-xl fw-bold  bg-slate-100 text-slate-900 outline-none shadow-sm"
+                  className="bg-slate-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                   placeholder="abc@gmail.com"
                   autoComplete="off"
                 />
@@ -45,7 +44,7 @@ function admin() {
                 <input
                   type="text"
                   id="mobile"
-                  className="w-full px-4 py-2 border rounded-xl fw-bold  bg-slate-100 text-slate-900 outline-none shadow-sm"
+                  className="bg-slate-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                   placeholder="+91 1234567890"
                   autoComplete="off"
                 />
@@ -57,14 +56,14 @@ function admin() {
                 <input
                   type="password"
                   id="password"
-                  className="w-full px-4 py-2 border rounded-xl fw-bold  bg-slate-100 text-slate-900 outline-none shadow-sm"
+                  className="bg-slate-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                   placeholder="********"
                   autoComplete="off"
                 />
               </div>
               <div className="mb-6 text-right">
                 <a
-                  href="/forgot-password"
+                  href="/admin/forgot-password"
                   className="text-blue-900 cursor-pointer hover:underline"
                   
                 >
