@@ -8,6 +8,7 @@ import Signup from './component/Signup.jsx';
 import Admin from './admin/admin.jsx';
 import ForgotPassword from './component/ForgotPassword.jsx';
 import AdminDashboard from './dashboard/AdminDashboard.jsx';
+
 import { Toaster } from 'react-hot-toast';
 import { useAuth } from './context/AuthProvide.jsx'
 
