@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import toast from "react-hot-toast"
+import toast from "react-hot-toast" //Tost is show pop-up to user login or not.
 
 
 function Login() {
@@ -13,6 +13,7 @@ function Login() {
   } = useForm();
 
   const onSubmit = async (data) => {
+    console.log("What is login data>>>", data);
     const loginInfo = {
       email: data.userEmail,
       password: data.userPassword
@@ -41,7 +42,7 @@ function Login() {
     <div>
       <dialog id="openModal" className="modal">
         <div className="modal-box dark:bg-slate-100 dark:text-slate-950 ">
-          <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
+          <form method="post" onSubmit={handleSubmit(onSubmit)}>
             <div
               onClick={() => document.getElementById("openModal").close()}
               className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
